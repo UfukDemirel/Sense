@@ -5,7 +5,7 @@ carousel {
   display: block;
   font-size: 6vmin;
 
-  page {
+page {
     position: absolute;
     top: 2em;
     left: 0;
@@ -15,7 +15,7 @@ carousel {
     div {
       padding: 3em;
     }
-    label {
+label {
       cursor: pointer;
       background: #d9ff4f;
       padding: 1em 2em;
