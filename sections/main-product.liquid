@@ -58,7 +58,7 @@
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
               {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
               <div class="pic-ctn">
-                <img src="https://i.bigpara.com/resize/650x365/i/55big/google_650.jpg" alt="" class="pic">
+                <img src="{{ product.selected_or_first_available_variant.featured_media }}" alt="" class="pic">
               </div>
               <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="product__media-item grid__item slider__slide is-active{% if featured_media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains featured_media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ featured_media.id }}">
                 {%- assign media_position = 1 -%}
@@ -66,9 +66,6 @@
               </li>
             {%- endif -%}
             {%- for media in product.media -%}
-              <div class="pic-ctn">
-                <img src="https://i.bigpara.com/resize/650x365/i/55big/google_650.jpg" alt="" class="pic">
-              </div>
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                 <li id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
                   {%- liquid
