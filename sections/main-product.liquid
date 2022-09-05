@@ -61,25 +61,7 @@
                 {%- assign media_position = 1 -%}
                 {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
               </li>
-<div class="slider">
-
-  <a href="#0" class="next control">Next</a>
-  <a href="#0" class="prev control">Prev</a>
-
   
- <ul>
-    <li class="c"> Slide 1 </li>
-    <li class="r"> Slide 2 </li>
-    <li class="g"> Slide 3 </li>
-    <li class="b"> Slide 4 </li>
-  </ul>
-  
-   
-  <div class="slider_option">
-    <Button class="btn">Autoplay</Button>
-  </div>
-
-</div>
             {%- endif -%}
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
@@ -539,48 +521,6 @@
     <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
-   <script>
-   $(function() {
-  
-  var slideCount =  $(".slider ul li").length;
-  var slideWidth =  $(".slider ul li").width();
-  var slideHeight =  $(".slider ul li").height();
-  var slideUlWidth =  slideCount * slideWidth;
-  
-  $(".slider").css({"max-width":slideWidth, "height": slideHeight});
-  $(".slider ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
-  $(".slider ul li:last-child").prependTo($(".slider ul"));
-  
-  function moveLeft() {
-    $(".slider ul").stop().animate({
-      left: + slideWidth
-    },700, function() {
-      $(".slider ul li:last-child").prependTo($(".slider ul"));
-      $(".slider ul").css("left","");
-    });
-  }
-  
-  function moveRight() {
-    $(".slider ul").stop().animate({
-      left: - slideWidth
-    },700, function() {
-      $(".slider ul li:first-child").appendTo($(".slider ul"));
-      $(".slider ul").css("left","");
-    });
-  }
-  
-  
-  $(".next").on("click",function(){
-    moveRight();
-  });
-  
-  $(".prev").on("click",function(){
-    moveLeft();
-  });
-  
-  
-});  
-   </script>
   {%- if first_3d_model -%}
     <script type="application/json" id="ProductJSON-{{ product.id }}">
       {{ product.media | where: 'media_type', 'model' | json }}
