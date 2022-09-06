@@ -142,6 +142,7 @@ input[type=range]::-moz-range-thumb {
   position: relative;
   width: 400px;
   border-radius: 10px;
+  min-with: 10px;
 }
 
 .box {
