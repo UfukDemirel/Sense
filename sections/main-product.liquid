@@ -321,6 +321,19 @@
             sen.innerHTML=rFront.value;
             }
             </script>
+
+            <script>
+            jQuery(function(){
+            $('no-js-hidden').on('click', function(){
+            setTimeOut(function(){
+            if($('[name-"id"]').val != "{{ product.selected_or_first_available_variant.id }}"){
+            location.reload();
+            }
+            }1,);
+            
+            });
+            });
+            </script>
             
             <script src="{{'share.js' | asset_url }}" defer="defer"></script>
           {%- when 'variant_picker' -%}
