@@ -61,25 +61,7 @@
                 {%- assign media_position = 1 -%}
                 {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
               </li>
-<div class="slider">
 
-  <a href="#0" class="next control">Next</a>
-  <a href="#0" class="prev control">Prev</a>
-
-  
- <ul>
-    <li class="c"> Slide 1 </li>
-    <li class="r"> Slide 2 </li>
-    <li class="g"> Slide 3 </li>
-    <li class="b"> Slide 4 </li>
-  </ul>
-  
-   
-  <div class="slider_option">
-    <Button class="btn">Autoplay</Button>
-  </div>
-
-</div>
             {%- endif -%}
             {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
