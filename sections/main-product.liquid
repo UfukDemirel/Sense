@@ -285,7 +285,7 @@
                 {{ 'products.product.quantity.label' | t }}
               </label>
 
-            <button><div id="deg">0</div></button>
+           <div id="deg">0</div>
             <input class="quantity__input" 
                    onchange="QtyText()" 
                    type="range" 
@@ -296,7 +296,6 @@
                    value="0" 
                    form="{{ product_form_id }}" 
                    />
-            <p id="rangeValue">0</p>
             
             <script src="{{'share.js' | asset_url }}" defer="defer"></script>
           {%- when 'variant_picker' -%}
