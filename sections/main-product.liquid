@@ -42,6 +42,7 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
   {% for media in product.media %} 
+        <div class="swiper-slide">
               <div align="center">
           {%- for media in product.media -%}
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
@@ -57,6 +58,7 @@
                 </li>
               {%- endunless -%}
             {%- endfor -%}
+              </div>
         </div> 
   {%- endfor -%}
 
