@@ -41,7 +41,6 @@
     <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-      <div class="owl-carousel">
          {% for image in product.images %}
          <div class="swiper-product-image"> 
             <a class="cloud-zoom-gallery sub-image" id="product-image-options-" href="{{ image.src  | img_url: 'master' }}" title="{{ featured_img_alt }}"
@@ -50,7 +49,6 @@
             </a>
          </div>
          {% endfor %}
-      </div>
    </div>
     
 <!--   {% for media in product.media %} 
