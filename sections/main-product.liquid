@@ -45,11 +45,11 @@
        {% case media.media_type %}
     {% when 'image' %}
       <div class="product-image">
-        <img src="{{ media | img_url: '100x100'}}" alt="{{ media.alt }}">
+        <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
        </div>
             {% else %}
       <div class="product-single__media">
-        {{ media | media_tag }}
+         <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
       </div>
   {% endcase %}
 {% endfor %}
