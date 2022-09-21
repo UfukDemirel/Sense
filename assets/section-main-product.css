@@ -3,6 +3,10 @@
   height: 650px;
   border-radius: 5px;
 }
+.swiper-img{
+  width: 600px;
+  height: 650px;
+}
 
 html, body {
   margin: 0;
