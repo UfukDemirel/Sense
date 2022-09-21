@@ -62,20 +62,18 @@
                 </li>
               {%- endunless -%}
             {%- endfor -%}
-      
-     {% for media in product.media %} 
-       {% case media.media_type %}
-    {% when 'media' %}
-      <div class="product-image">
-        <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
-       </div>
-            {% else %}
-      <div class="product-single__media">
-         <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
-      </div>
-  {% endcase %}
-{% endfor %}
+</div>
     </div>
+
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
   </div>
     
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
