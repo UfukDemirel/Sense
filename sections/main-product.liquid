@@ -37,7 +37,8 @@
   {%- endif -%}
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-
+    
+    <div class="swiper mySwiper">
     <div class="swiper">
     <div class="swiper-wrapper">
       {% for media in product.media %} 
@@ -53,6 +54,7 @@
                 </div>
             </div> 
       {%- endfor -%}
+    </div>
     </div>
 
   <!-- If we need pagination -->
