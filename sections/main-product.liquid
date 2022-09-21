@@ -41,7 +41,19 @@
     <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-  {% for media in product.media %} 
+      <div class="owl-carousel">
+         {% for image in product.images %}
+         <div class="swiper-product-image"> 
+            <a class="cloud-zoom-gallery sub-image" id="product-image-options-" href="{{ image.src  | img_url: 'master' }}" title="{{ featured_img_alt }}"
+               rel="useZoom: 'product-cloud-zoom', smallImage: '{{ image.src | img_url: 'master' }}'" data-pos="{{ forloop.index }}">
+           <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
+            </a>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+    
+<!--   {% for media in product.media %} 
         <div class="swiper-slide">
               <div align="center">
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -53,7 +65,7 @@
             {%- endif -%}
               </div>
         </div> 
-  {%- endfor -%}
+  {%- endfor -%} -->
 
      {% for media in product.media %} 
        {% case media.media_type %}
