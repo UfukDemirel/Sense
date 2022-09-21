@@ -698,7 +698,7 @@ a.product__text {
   }
 
   .product__media-list::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--color-foreground));
+    
   }
 
   .product__media-list::-webkit-scrollbar-track {
