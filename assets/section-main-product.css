@@ -4,17 +4,6 @@
   border-radius: 5px;
 }
 
-   .slid-prev {
-  position: absolute; 
-  top:220px; 
-  z-index:2; 
-  background-color:revert; 
-  border-radius:20px; 
-  padding:15px; 
-  margin:10px;
-  left: -45px;
-}
-
 html, body {
   margin: 0;
   padding: 0;
