@@ -57,7 +57,8 @@
        {%- assign media_position = 1 -%}
        {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
       </li>
-      {%- endif -%}    </div>
+      {%- endif -%}    
+    </div>
     <div class="swiper-slide">
         <img class="swiper-img" src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
     </div>
