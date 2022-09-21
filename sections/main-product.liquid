@@ -44,8 +44,7 @@
   {% for media in product.media %} 
         <div class="swiper-slide">
               <div align="center">
-              <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag: height: 600 }}">
-              <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 900 | image_tag: height: 600 }}">
+              <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag: height: 700 }}">
               </div>
         </div> 
   {%- endfor -%}
