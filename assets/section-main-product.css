@@ -970,7 +970,7 @@ a.product__text {
   position: fixed;
   z-index: 2;
   top: 2rem;
-  width: 100px;
+  width: 600px;
 }
 
 .product-media-modal__content .deferred-media {
