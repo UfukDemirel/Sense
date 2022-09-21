@@ -55,7 +55,12 @@
                 </div>
             </div> 
       {%- endfor -%} -->
-  <p>asdasdas</p>  </div>
+     {% for image in product.media %} 
+         <img src="{{ image | img_url: '150x150' }}">
+        
+      {%- endfor -%}   
+    
+    </div>
 
   
 
