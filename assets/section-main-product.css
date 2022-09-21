@@ -961,7 +961,7 @@ a.product__text {
   border: 0.1rem solid rgba(var(--color-foreground), 0.1);
   border-radius: 50%;
   color: rgba(var(--color-foreground), 0.55);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -970,7 +970,7 @@ a.product__text {
   position: fixed;
   z-index: 2;
   top: 2rem;
-  width: 4rem;
+  width: 100px;
 }
 
 .product-media-modal__content .deferred-media {
