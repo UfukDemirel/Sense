@@ -26,6 +26,18 @@
   margin:10px;
   right: -10px;
 }
+
+   .slider-button {
+  color: rgba(var(--color-foreground), 0.75);
+  background: #33303017;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 }
 
 html, body {
