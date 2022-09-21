@@ -44,15 +44,11 @@
      {% for image in product.images %}
        <div class="swiper-slide">
           <div align="center">
-            <img src="{{ image | image_url: width: 1080 | image_tag }}">
+            <img src="{{ image | image_url: width: 600 | image_tag: height: 600 }}">
         </div>
-            </div> 
+      </div> 
       {%- endfor -%}   
-    
     </div>
-
-  
-
         
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
