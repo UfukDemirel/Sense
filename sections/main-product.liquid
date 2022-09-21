@@ -42,7 +42,9 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
   {% for media in product.media %} 
-       {% case media.media_type %}
+        <div class="swiper-slide">
+              <div align="center">
+               {% case media.media_type %}
     {% when 'media' %}
       <div class="product-image">
         <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
@@ -52,8 +54,9 @@
          <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
       </div>
   {% endcase %}
-{% endfor %}
-
+              </div>
+        </div> 
+  {%- endfor -%}
     </div>
 
   <!-- If we need pagination -->
