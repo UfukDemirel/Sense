@@ -1,6 +1,7 @@
 .swiper {
   width: 600px;
   height: 650px;
+  border-radius: 3px;
 }
 
 html, body {
