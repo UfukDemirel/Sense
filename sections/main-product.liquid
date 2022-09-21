@@ -41,18 +41,16 @@
     <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-      
-      {% for media in product.media %} 
+   {% for media in product.media %} 
         <div class="swiper-slide">
-        {%- if featured_media != null -%}
-           {% if media.host == 'youtube' %}
+         {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
+           {% if media_position > 1 %}
              <img class="swiper-img" src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
            {% endif %}
          {% endif %}
         </div> 
      {%- endfor -%}
-     
-</div>
+    </div>
 
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
