@@ -44,9 +44,7 @@
   {% for media in product.media %} 
         <div class="swiper-slide">
          {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
-           {% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %}
              <img class="swiper-img" src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
-           {% endif %}
          {% endif %}
         </div> 
      {%- endfor -%}
