@@ -44,7 +44,7 @@
       
       {% for media in product.media %} 
         <div class="swiper-slide">
-         {% if media.media_type == 'external_video' %}
+        {%- if featured_media != null -%}
            {% if media.host == 'youtube' %}
              <img class="swiper-img" src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
            {% endif %}
