@@ -4,7 +4,12 @@
 }
 
 .swiper-container{
-  
+  height:500px;
+  .swiper-slide{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
 }
 
 html, body {
