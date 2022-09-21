@@ -58,7 +58,9 @@
     </div>
 
   <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
   </div>
     
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
@@ -413,12 +415,17 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
                       
 <script>
-    const swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
+   var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
         },
+        mousewheel: true,
+        keyboard: true,
       });
 </script>
                       
