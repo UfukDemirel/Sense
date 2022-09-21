@@ -55,6 +55,11 @@
       {%- endfor -%}
     </div>
 
+      {% for image in product.image %} 
+          {{ image }}
+      {%- endfor -%}
+
+        
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
   <div class="swiper-scrollbar"></div>
