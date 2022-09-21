@@ -41,7 +41,15 @@
     <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-  {% for media in product.media %} 
+  {% for media in product.media %}
+  {% case media.media_type %}
+    {% when 'image' %}
+      <div class="product-image">
+        <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
+       </div>
+      {% endcase %}
+{% endfor %}
+<!--   {% for media in product.media %} 
         <div class="swiper-slide">
               <div align="center">
                 {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -52,7 +60,7 @@
               </li>
             {%- endif -%}
               </div>
-        </div> 
+        </div>  -->
   {%- endfor -%}
     </div>
 
