@@ -41,15 +41,16 @@
     <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-   {% for media in product.media %} 
+  {% for media in product.media %} 
         <div class="swiper-slide">
          {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
-           {% if media_position > 1 %}
+           {% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %}
              <img class="swiper-img" src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
            {% endif %}
          {% endif %}
         </div> 
      {%- endfor -%}
+
     </div>
 
   <!-- If we need pagination -->
