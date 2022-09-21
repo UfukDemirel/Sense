@@ -413,9 +413,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
+    var swiper = new Swiper('.swiper', {
 
+        effect={"cube"},
+        grabCursor={true},
+        cubeEffect={
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+      }
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
