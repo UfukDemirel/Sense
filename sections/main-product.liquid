@@ -62,6 +62,19 @@
                 </li>
               {%- endunless -%}
             {%- endfor -%}
+      
+     {% for media in product.media %} 
+       {% case media.media_type %}
+    {% when 'media' %}
+      <div class="product-image">
+        <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
+       </div>
+            {% else %}
+      <div class="product-single__media">
+         <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 600 | image_tag }}">
+      </div>
+  {% endcase %}
+{% endfor %}
     </div>
   </div>
     
