@@ -40,9 +40,9 @@
 
     <div class="swiper">
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
+  <div class="swiper-wrapper"><img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 1080 | image_tag }}">
    {%- for media in product.media -%}
-     <img src="{{ product.selected_or_first_available_variant.featured_media | image_url: width: 1080 | image_tag }}">
+     
      <div class="swiper-slide">
               {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
                 <div align="center">
