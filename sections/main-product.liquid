@@ -45,19 +45,19 @@
   <div class="swiper-slide">
   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
    {{ media | video_tag }}
-  </div>
   {% endif %}
+  </div>
 {% endfor %}
       
-{% comment %}      {% for image in product.images %}
+{% for image in product.images %}
        <div class="swiper-slide">
          {% if image %}
             <img class="swiper-img" src="{{ image | image_url}}">
-         {% elsif video %}
-            <img class="swiper-img" src="{{ video | video_tag }}">
-         {% endif %}
+          {% elsif media.media_type == 'video' or media.media_type == 'external_video' %}
+   {{ media | video_tag }}
+  {% endif %}
       </div>
-      {%- endfor -%}  {% endcomment %}
+      {%- endfor -%} 
     </div>
 
 
