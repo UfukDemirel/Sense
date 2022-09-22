@@ -40,13 +40,10 @@
 
     <div class="swiper">
     <div class="swiper-wrapper">
-    {% for video in product.images %}
-      <img class="swiper-img" src="{{ image | video_tag}}">
-      {% endfor %}
      {% for image in product.images %}
        <div class="swiper-slide">
          {% if image %}
-            <img class="swiper-img" src="{{ image | image_url}}">
+            <img class="swiper-img" src="{{ image | image_url}}"><img class="swiper-img" src="{{ image | video_tag}}">
          {% endif %}
       </div> 
       {%- endfor -%}   
