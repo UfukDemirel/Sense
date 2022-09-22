@@ -41,9 +41,9 @@
     <div class="swiper">
     <div class="swiper-wrapper">
 
-{% for media in product.images %}
-  {% if media.media_type == 'image' %}
-   asdasdasdasdsad <img class="swiper-img" src="{{ image | image_url}}">
+{% for img in product.images %}
+  {% if img.media_type == 'image' %}
+     <img class="swiper-img" src="{{ image | image_url}}">
   {% endif %}
 {% endfor %}
       
