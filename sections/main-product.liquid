@@ -40,7 +40,14 @@
 
     <div class="swiper">
     <div class="swiper-wrapper">
-     {% for image in product.images %}
+
+{% for media in product.media %}
+  {% if media.media_type == 'video' %}
+    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}.
+  {% endif %}
+{% endfor %}
+      
+{% comment %}      {% for image in product.images %}
        <div class="swiper-slide">
          {% if image %}
             <img class="swiper-img" src="{{ image | image_url}}">
@@ -48,14 +55,10 @@
             <img class="swiper-img" src="{{ video | video_tag }}">
          {% endif %}
       </div>
-      {%- endfor -%} 
+      {%- endfor -%}  {% endcomment %}
     </div>
 
- {% for media in product.media %}
-  {% if media.media_type == 'video' %}
-    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}.
-  {% endif %}
-{% endfor %}
+
       
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
