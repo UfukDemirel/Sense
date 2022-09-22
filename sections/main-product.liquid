@@ -53,7 +53,7 @@
 
  {% for media in product.media %}
   {% if media.media_type == 'video' %}
-    {{ media | video_tag }}
+    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}.
   {% endif %}
 {% endfor %}
       
