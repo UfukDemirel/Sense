@@ -45,7 +45,7 @@
   <div class="swiper-slide">
   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
   <video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=PAe6E8msc_Y">
+  <source src="{{ media }}">
 </video>
   </div>
   {% endif %}
