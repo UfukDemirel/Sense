@@ -42,7 +42,9 @@
     <div class="swiper-wrapper">
 
 {% for video in product.images %}
-     <img class="swiper-img" src="{{ video | video_tag }}">
+     <div class="swiper-slide">
+      <img class="swiper-img" src="{{ video | video_tag }}">
+       </div>
 {% endfor %}
       
 {% comment %}      {% for image in product.images %}
