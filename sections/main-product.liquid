@@ -42,8 +42,8 @@
     <div class="swiper-wrapper">
 
 {% for media in product.images %}
-  {% if media.media_type == 'video' %}
-    {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: true }}.
+  {% if media.media_type == 'image' %}
+    <img class="swiper-img" src="{{ image | image_url}}">
   {% endif %}
 {% endfor %}
       
