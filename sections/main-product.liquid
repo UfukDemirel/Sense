@@ -48,7 +48,7 @@
       </div> <img class="swiper-img" src="{{ video_source | video_tag}}">
       {%- endfor -%} 
 
-      {% for video in video_source %}
+      {% for video in product.selected_or_first_available_variant.video %}
          <img class="swiper-img" src="{{ video | video_tag}}">
       {% endfor %}
     </div>
