@@ -6,7 +6,8 @@
 
 .swiper-img{
   border-radius: 5px;
-  
+  width: 600px;
+  height: 480px;
 }
 
 html, body {
