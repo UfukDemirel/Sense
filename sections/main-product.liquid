@@ -50,7 +50,17 @@
       </div>
       {%- endfor -%} 
     </div>
-        
+
+    {% for media in product.media %}
+  {% if media.media_type == 'external_video' %}
+    {% if media.host == 'youtube' %}
+      {{ media | external_video_url: color: 'white' | external_video_tag }}
+    {% elsif media.host == 'video' %}
+      {{ media | external_video_url: loop: '1', muted: '1' | external_video_tag }}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+      
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
   </div>
