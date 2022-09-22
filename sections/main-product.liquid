@@ -45,13 +45,8 @@
          {% if image %}
             <img class="swiper-img" src="{{ image | image_url}}">
          {% endif %}
-      </div> <img class="swiper-img" src="{{ video_source | video_tag}}">
+      </div>
       {%- endfor -%} 
-
-      {% for video in product.media %}
-      {% assign videos = product.media | where: 'media_type', 'video' %}   
-      <img class="swiper-img" src="{{ video | video_tag}}">
-      {% endfor %}
     </div>
         
   <!-- If we need pagination -->
