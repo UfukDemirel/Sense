@@ -1,13 +1,13 @@
 .swiper {
   width: 600px;
-  height: 480px;
+  height: 500px;
   border-radius: 5px;
 }
 
 .swiper-img{
   border-radius: 5px;
   width: 500px;
-  height: 90px;
+  height: 500px;
 }
 
 html, body {
