@@ -43,6 +43,7 @@
 
 {% for vid in product.images %}
      <div class="swiper-slide"> 
+       <img class="swiper-img" src="{{ image | image_url}}">
        <source src="{{ vid | video_tag }}" type="video/mp4">
      </div>
 {% endfor %}
