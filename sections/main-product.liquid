@@ -41,11 +41,12 @@
     <div class="swiper">
     <div class="swiper-wrapper">
 
-{% for vid in product.images %}
-     <div class="swiper-slide"> 
-       <img class="swiper-img" src="{{ image | image_url}}">
-       <source src="{{ vid | video_tag }}" type="video/mp4">
-     </div>
+{% for media in product.media %}
+  <div class="swiper-slide">
+  {% if media.media_type == 'video' %}
+    {{ media | video_tag }}
+  </div>
+  {% endif %}
 {% endfor %}
       
 {% comment %}      {% for image in product.images %}
