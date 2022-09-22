@@ -52,7 +52,7 @@
     </div>
 
   {% for media in product.images %}
-  {% if media.media_type == 'external_video' %}
+  {% if media.media_type == 'image' %}
     {% if media.host == 'image' %}
      <img class="swiper-img" src="{{ image | image_url}}">
     {% endif %}
