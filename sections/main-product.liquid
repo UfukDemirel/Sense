@@ -44,7 +44,7 @@
 {% for media in product.media %}
   <div class="swiper-slide">
   {% if media.media_type == 'video' %}
-    {{ media | video_tag }}
+   <media src="video.mp4" type="video/mp4" />
   </div>
   {% endif %}
 {% endfor %}
