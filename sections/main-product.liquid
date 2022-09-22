@@ -44,9 +44,7 @@
 {% for media in product.media %}
   <div class="swiper-slide">
   {% if media.media_type == 'video' or media.media_type == 'external_video' %}
-  <video width="320" height="240" controls>
-  <source src="{{ media }}">
-</video>
+   {{ media | video_tag }}
   </div>
   {% endif %}
 {% endfor %}
