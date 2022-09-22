@@ -43,7 +43,7 @@
     
      {% for image in product.images %}
        <div class="swiper-slide">
-         {% if media.media_type=='video' %}
+         {% if media.media_type=='image' %}
             <img class="swiper-img" src="{{ image | image_url }}">
             <img class="swiper-img" src="{{- video | video_tag }}">
          {% endif %}
