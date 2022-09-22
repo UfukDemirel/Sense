@@ -40,7 +40,7 @@
 
     <div class="swiper">
     <div class="swiper-wrapper">
-    {% for video in videos %}
+    {% for video in product.images %}
       {{- video | video_tag }}
       {% endfor %}
      {% for image in product.images %}
