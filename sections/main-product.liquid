@@ -53,8 +53,8 @@
        <div class="swiper-slide">
          {% if image.media_type == 'image' %}
             <img class="swiper-img" src="{{ image | image_url}}">
-          {% elsif media.media_type == 'video' or media.media_type == 'external_video' %}
-          {{ media | video_tag }}
+          {% elsif image.media_type == 'video' or image.media_type == 'external_video' %}
+          {{ image | video_tag }}
           {% endif %}
       </div>
       {%- endfor -%} 
