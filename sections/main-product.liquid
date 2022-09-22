@@ -46,7 +46,9 @@
          {% if image.media_type == 'image' %}
             <img class="swiper-img" src="{{ image | image_url}}">
           {% elsif image.media_type == 'video' or image.media_type == 'external_video' %}
-          {{ image | video_tag }}
+          <video width="1320" height="1240" controls>
+           {{ image | video_tag }}
+          </video>
           {% endif %}
       </div>
       {%- endfor -%} 
