@@ -41,6 +41,13 @@
     <div class="swiper">
     <div class="swiper-wrapper">
 
+{% for media in product.media %}
+  <div class="swiper-slide">
+  {% if media.media_type == 'video' %}
+    {{ media | video_tag }}
+  </div>
+  {% endif %}
+{% endfor %}
       
 {% comment %}      {% for image in product.images %}
        <div class="swiper-slide">
