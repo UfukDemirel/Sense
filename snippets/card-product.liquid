@@ -113,10 +113,7 @@
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
 
-              {%- if money_price -%}
-              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.price }}</div>
-              {%- endif -%}
+          
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
@@ -144,6 +141,12 @@
 
             {% render 'price', product: card_product, price_class: '' %}
           </div>
+
+          {%- if money_price -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ card_product.price }}</div>
+              {%- endif -%}
+      
         </div>
         {%- if show_quick_add -%}
           <div class="quick-add">
