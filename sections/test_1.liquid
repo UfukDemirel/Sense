@@ -1,10 +1,11 @@
-<img src="{{ block.settings.image | image_url: width: 1080 | image_tag }}">
+
 
 {% for block in section.blocks %}
    <div>        
       <h2>{{ block.settings.text }}</h2>
-     <h2>{{ block.settings.title }}</h2>
-      </div>
+      <h2>{{ block.settings.title }}</h2>
+      {{ block.settings.image | image_url: width: 1080 | image_tag }}
+   </div>
 {% endfor %}
 
 {% schema %}
