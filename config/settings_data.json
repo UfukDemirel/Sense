@@ -211,10 +211,17 @@
             "settings": {
               "text": "LUFİAN"
             }
+          },
+          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "frontpage"
+            }
           }
         },
         "block_order": [
-          "7850cecb-192d-4182-9c12-1883c53cd20b"
+          "7850cecb-192d-4182-9c12-1883c53cd20b",
+          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81"
         ],
         "settings": {
           "title": ""
