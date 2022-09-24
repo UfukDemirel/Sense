@@ -205,10 +205,30 @@ var Btn=document.querySelector('#Btn');
 </script>  
     
 {% schema %}
-{
-  "name": "t:sections.main-collection-product-grid.name",
-  "class": "section",
-  "settings": [
+    {
+      "name": "t:sections.main-collection-product-grid.name",
+      "class": "section",
+      "settings": [
+        {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
     {
       "type": "range",
       "id": "products_per_page",
