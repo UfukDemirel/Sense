@@ -11,8 +11,8 @@
 
 {%- endstyle -%}
 
-{% for ad in section.blocks %}      
-      <h2>{{ ad.settings.text }}</h2>
+{% for block in section.blocks %}      
+      <h2>{{ block.settings.text }}</h2>
 {% endfor %}
 
 {% for block in section.blocks %}
@@ -40,17 +40,6 @@
     }
   ],
   "blocks": [
-     {
-       "name": "İmage",
-       "type": "image_picker",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "İmage"
-         }
-       ]
-     },
      {
       "type": "text",
       "name": "Text",
