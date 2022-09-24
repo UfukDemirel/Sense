@@ -23,10 +23,11 @@
         </div> 
      </div> 
    </div>
+   <h2>{{ block.settings.text }}</h2>
+      <h2>{{ block.settings.title }}</h2>
 {% endfor %}
 {% for block in section.blocks %}      
-      <h2>{{ block.settings.text }}</h2>
-      <h2>{{ block.settings.title }}</h2>
+      
 {% endfor %}
 {% schema %}
 {
