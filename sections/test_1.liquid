@@ -16,14 +16,14 @@
       <h2>{{ block.settings.title }}</h2>
 {% endfor %}
 
-{% for block in section.blocks %}
+<!-- {% for block in section.blocks %}
    <div>           
      <div class="color-{{ section.settings.color_scheme }} gradient">
         <div class="collection-list-wrapper boyut page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
-     asdasdsad
+      {{ block.settings.collection }}
         </div> 
      </div> 
-   </div>
+   </div> -->
 {% endfor %}
 
 {% schema %}
