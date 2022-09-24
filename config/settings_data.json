@@ -223,7 +223,8 @@
           "b6c0394a-432a-450c-bad3-9b5deaa6e017": {
             "type": "title",
             "settings": {
-              "title": "sdadsad"
+              "title": "Collection",
+              "padding_top": 20
             }
           }
         },
