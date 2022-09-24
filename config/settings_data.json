@@ -220,18 +220,17 @@
               "collection": "kadin-giyim"
             }
           },
-          "b6c0394a-432a-450c-bad3-9b5deaa6e017": {
+          "b3678404-50de-41c9-9201-735657783816": {
             "type": "title",
             "settings": {
-              "title": "Collection",
-              "padding_top": 20
+              "title": "Collection"
             }
           }
         },
         "block_order": [
           "f5f61066-b4fa-4e49-aae2-062c16012af7",
           "fe39efbc-04c8-4b52-8c96-38bf0ffce46c",
-          "b6c0394a-432a-450c-bad3-9b5deaa6e017"
+          "b3678404-50de-41c9-9201-735657783816"
         ],
         "settings": {
           "title": ""
