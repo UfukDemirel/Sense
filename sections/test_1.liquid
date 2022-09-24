@@ -1,3 +1,19 @@
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+{% style %}
+
+  .boyut{
+    width: 350px;
+    height: 350px;
+    float:left;
+  }
+
+{%- endstyle -%}
+
 
 {% for block in section.blocks %}
    <div>        
