@@ -260,40 +260,40 @@ var Btn=document.querySelector('#btn');
 var Btn=document.querySelector('#btn');
         var control1=document.querySelector('#ilk1');
         var control2=document.querySelector('#ikinci2');
-        var diz= document.querySelectorAll("#yes");
-        var diz1=document.querySelectorAll("#no");
+        var diz1= document.querySelectorAll("#yes");
+        var diz2=document.querySelectorAll("#no");
 
         Btn.addEventListener('click', () =>{
         if(control1==0){
         for(var i =0; i<diz.length;i++){
-              diz[i].style.display="none";
+              diz1[i].style.display="none";
             } 
         }
           else{
             for(var i =0; i<diz.length;i++){
-              diz[i].style.display="block";
+              diz1[i].style.display="block";
             }
           }
         });
         Btn.addEventListener('click', () =>{   
         if(control2==1){
             for(var i =0; i<diz1.length;i++){
-              diz1[i].style.display="none";
+              diz2[i].style.display="none";
             }  
         }
           else{
             for(var i =0; i<diz1.length;i++){
-              diz1[i].style.display="block";
+              diz2[i].style.display="block";
             }
           }
         });
         Btn.addEventListener('click', () =>{
           if(control1.checked && control2.checked){
-            for(var i=0;i<diz.length;i++){
-              diz[i].style.display="block";
-            }
             for(var i=0;i<diz1.length;i++){
               diz1[i].style.display="block";
+            }
+            for(var i=0;i<diz1.length;i++){
+              diz2[i].style.display="block";
             }
           }
         });
