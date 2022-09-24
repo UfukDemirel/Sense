@@ -96,57 +96,6 @@
         {%- else -%}
           <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
             <div class="loading-overlay gradient"></div>
-
-<div class="container1">
-    
-    <div class="container2">
-    <input type="checkbox" id="accept"/>
-    <label for="accept">Stotakta olanları göster</label>
-
-     
-    <input type="checkbox" id="accept3"/>
-    <label for="accept3">Stotakta olmayanları göster</label>
-    </div>
-    <button type="submit" id="Btn" class="btn btn-primary" >Apply</button> 
-</div>
-          
-            <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-            grid--{{ section.settings.columns_desktop }}--col-desktop">
-            {%- for product in collection.products -%}
-            {% assign lazy_load = false %}
-            {%- if forloop.index > 2 -%}
-            {% assign lazy_load = true %}
-            {% endif %}
-
-  {%- if product.available == false -%}  
-    <li class="grid__item" id="oldu">
-    {% render 'card-product',
-    card_product:product,
-    media_aspect_ratio: section.settings.image_ratio,
-    show_secondary_image: section.settings.show_secondary_image,
-    show_vendor: section.settings.show_vendor,
-    show_rating: section.settings.show_rating,
-    lazy_load: lazy_load,
-    show_quick_add: section.settings.enable_quick_add,
-    section_id: section.id  
-    %}
-    </li>
-
-    {% else %}
-     <li class="grid__item" id="olmadi">
-    {% render 'card-product',
-    card_product:product,
-    media_aspect_ratio: section.settings.image_ratio,
-    show_secondary_image: section.settings.show_secondary_image,
-    show_vendor: section.settings.show_vendor,
-    show_rating: section.settings.show_rating,
-    lazy_load: lazy_load,
-    show_quick_add: section.settings.enable_quick_add,
-    section_id: section.id  
-    %}
-    </li>
-  {% endif %}  
-  {% endfor %}    
     
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
