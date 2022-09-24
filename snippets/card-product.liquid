@@ -115,7 +115,7 @@
 
            {%- if money_price -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ 'products.product.price' | t }}</div>
+              <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
             {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
