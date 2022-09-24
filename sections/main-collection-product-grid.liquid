@@ -105,7 +105,7 @@
             {% assign lazy_load = true %}
             {% endif %}
 
-            {% if card_product.featured_media %}
+            {% if product.collections.first %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
