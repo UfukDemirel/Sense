@@ -113,11 +113,11 @@
 
             <div class="container1">
                 <div class="container2">
-                <input type="checkbox" id="" value="0"/>
+                <input type="checkbox" id="ilk1" value="0"/>
                 <label for="accept">İlk Resmi Göster</label>
             
                  
-                <input type="checkbox" id="" value="1"/>
+                <input type="checkbox" id="ikinci2" value="1"/>
                 <label for="accept3">İkinci Resmi Göster</label>
                 </div>
           
@@ -132,35 +132,35 @@
             {% assign lazy_load = true %}
             {% endif %}
 
-  {%- if product.available == false -%}  
-    <li class="grid__item" id="oldu">
-    {% render 'card-product',
-    card_product:product,
-    media_aspect_ratio: section.settings.image_ratio,
-    show_secondary_image: section.settings.show_secondary_image,
-    show_vendor: section.settings.show_vendor,
-    show_rating: section.settings.show_rating,
-    lazy_load: lazy_load,
-    show_quick_add: section.settings.enable_quick_add,
-    section_id: section.id  
-    %}
-    </li>
-
-    {% else %}
-     <li class="grid__item" id="olmadi">
-    {% render 'card-product',
-    card_product:product,
-    media_aspect_ratio: section.settings.image_ratio,
-    show_secondary_image: section.settings.show_secondary_image,
-    show_vendor: section.settings.show_vendor,
-    show_rating: section.settings.show_rating,
-    lazy_load: lazy_load,
-    show_quick_add: section.settings.enable_quick_add,
-    section_id: section.id  
-    %}
-    </li>
-  {% endif %}  
-  {% endfor %}    
+            {%- if product.available == false -%}  
+              <li class="grid__item" id="oldu">
+              {% render 'card-product',
+              card_product:product,
+              media_aspect_ratio: section.settings.image_ratio,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              lazy_load: lazy_load,
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id  
+              %}
+              </li>
+          
+              {% else %}
+               <li class="grid__item" id="olmadi">
+              {% render 'card-product',
+              card_product:product,
+              media_aspect_ratio: section.settings.image_ratio,
+              show_secondary_image: section.settings.show_secondary_image,
+              show_vendor: section.settings.show_vendor,
+              show_rating: section.settings.show_rating,
+              lazy_load: lazy_load,
+              show_quick_add: section.settings.enable_quick_add,
+              section_id: section.id  
+              %}
+              </li>
+            {% endif %}  
+            {% endfor %}    
     
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
@@ -176,8 +176,52 @@
 
 var Btn=document.querySelector('#btn');
         var control=document.querySelector('#accept');
-        var control1=document.querySelector('#accept2');
         var control1=document.querySelector('#accept3');
+        var diz= document.querySelectorAll("#oldu");
+        var diz1=document.querySelectorAll("#olmadi");
+
+        Btn.addEventListener('click', () =>{
+        if(control.checked){
+        for(var i =0; i<diz.length;i++){
+              diz[i].style.display="none";
+            } 
+        }
+          else{
+            for(var i =0; i<diz.length;i++){
+              diz[i].style.display="block";
+            }
+          }
+        });
+        Btn.addEventListener('click', () =>{   
+        if(control1.checked){
+            for(var i =0; i<diz1.length;i++){
+              diz1[i].style.display="none";
+            }  
+        }
+          else{
+            for(var i =0; i<diz1.length;i++){
+              diz1[i].style.display="block";
+            }
+          }
+        });
+        Btn.addEventListener('click', () =>{
+          if(control.checked && control1.checked){
+            for(var i=0;i<diz.length;i++){
+              diz[i].style.display="block";
+            }
+            for(var i=0;i<diz1.length;i++){
+              diz1[i].style.display="block";
+            }
+          }
+        });
+  
+</script>  
+
+              <script> 
+
+var Btn=document.querySelector('#btn');
+        var control=document.querySelector('#ilk1');
+        var control1=document.querySelector('#ikinci2');
         var diz= document.querySelectorAll("#oldu");
         var diz1=document.querySelectorAll("#olmadi");
 
