@@ -277,25 +277,6 @@
         "padding_top": 68,
         "padding_bottom": 52
       }
-    },
-    "1663149012e1003b0e": {
-      "type": "apps",
-      "blocks": {
-        "2edc2aad-2b1d-4349-ad86-3485836d943e": {
-          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "heading_size": 20,
-            "feed_width": 100,
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "2edc2aad-2b1d-4349-ad86-3485836d943e"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -305,7 +286,6 @@
     "collage",
     "multicolumn",
     "collection-list",
-    "newsletter",
-    "1663149012e1003b0e"
+    "newsletter"
   ]
 }
