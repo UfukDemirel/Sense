@@ -208,12 +208,6 @@
       "test_1": {
         "type": "test_1",
         "blocks": {
-          "7850cecb-192d-4182-9c12-1883c53cd20b": {
-            "type": "text",
-            "settings": {
-              "text": "Collection"
-            }
-          },
           "f5f61066-b4fa-4e49-aae2-062c16012af7": {
             "type": "featured_collection",
             "settings": {
@@ -225,12 +219,18 @@
             "settings": {
               "collection": "kadin-giyim"
             }
+          },
+          "b6c0394a-432a-450c-bad3-9b5deaa6e017": {
+            "type": "title",
+            "settings": {
+              "title": "sdadsad"
+            }
           }
         },
         "block_order": [
-          "7850cecb-192d-4182-9c12-1883c53cd20b",
           "f5f61066-b4fa-4e49-aae2-062c16012af7",
-          "fe39efbc-04c8-4b52-8c96-38bf0ffce46c"
+          "fe39efbc-04c8-4b52-8c96-38bf0ffce46c",
+          "b6c0394a-432a-450c-bad3-9b5deaa6e017"
         ],
         "settings": {
           "title": ""
