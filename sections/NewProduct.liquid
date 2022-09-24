@@ -1,3 +1,10 @@
+{% comment %} {% for block in section.blocks %}
+   <div>        
+      <h2>{{ block.settings.text }}</h2>
+     <h2>{{ block.settings.title }}</h2>
+      </div>
+{% endfor %} {% endcomment %}
+
 {% schema %}
   {
     "name": "Section name",
