@@ -11,11 +11,13 @@
     "main-collection-product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "select": "1",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
+        "money_price": true,
         "show_rating": true,
         "enable_quick_add": false,
         "enable_filtering": true,
