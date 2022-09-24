@@ -118,7 +118,7 @@
             %}
             </li> 
               
-            {% if section.settings.id.value == 1 %}
+            {% if section.settings.value == 1 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
@@ -132,7 +132,7 @@
             %}
             </li>
               
-            {% elsif section.settings.id.value == 2 %}  
+            {% elsif section.settings.value == 2 %}  
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
