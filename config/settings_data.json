@@ -209,7 +209,7 @@
           "7850cecb-192d-4182-9c12-1883c53cd20b": {
             "type": "text",
             "settings": {
-              "content": "<p>Collection<\/p>"
+              "content": "<p>asdadasdasd<\/p>"
             }
           },
           "f5f61066-b4fa-4e49-aae2-062c16012af7": {
@@ -224,7 +224,7 @@
           "f5f61066-b4fa-4e49-aae2-062c16012af7"
         ],
         "settings": {
-          "content": "<p>asdasdassadsad<\/p>"
+          "header": ""
         }
       },
       "main-product": {
