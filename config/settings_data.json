@@ -211,10 +211,17 @@
             "settings": {
               "collection": "frontpage"
             }
+          },
+          "7339ea8c-967a-4dc4-846d-8dd13d728487": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "erkek-giyim"
+            }
           }
         },
         "block_order": [
-          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81"
+          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81",
+          "7339ea8c-967a-4dc4-846d-8dd13d728487"
         ],
         "settings": {
           "title": ""
