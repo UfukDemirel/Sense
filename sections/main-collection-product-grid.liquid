@@ -133,7 +133,7 @@
             {% endif %}
 
             {%- if product.available == false -%}  
-              <li class="grid__item" id="oldu">
+              <li class="grid__item" id="yes">
               {% render 'card-product',
               card_product:product,
               media_aspect_ratio: section.settings.image_ratio,
@@ -147,7 +147,7 @@
               </li>
           
               {% else %}
-               <li class="grid__item" id="olmadi">
+               <li class="grid__item" id="no">
               {% render 'card-product',
               card_product:product,
               media_aspect_ratio: section.settings.image_ratio,
@@ -260,8 +260,8 @@ var Btn=document.querySelector('#btn');
 var Btn=document.querySelector('#btn');
         var control=document.querySelector('#ilk1');
         var control1=document.querySelector('#ikinci2');
-        var diz= document.querySelectorAll("#oldu");
-        var diz1=document.querySelectorAll("#olmadi");
+        var diz= document.querySelectorAll("#yes");
+        var diz1=document.querySelectorAll("#no");
 
         Btn.addEventListener('click', () =>{
         if(control.checked){
