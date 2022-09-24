@@ -45,33 +45,18 @@
       "name": "Text",
       "settings": [
         {
-          "type": "text",
-           "id": "text",
-           "label": "Text Giriniz..."
+          "type": "range",
+          "id": "font_size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size",
+          "default": 16
         }
       ]
     },
-    {
-      "type": "share",
-      "name": "t:sections.main-product.blocks.share.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "share_label",
-          "label": "t:sections.main-product.blocks.share.settings.text.label",
-          "default": "Share"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-product.blocks.share.settings.featured_image_info.content"
-        },
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-product.blocks.share.settings.title_info.content"
-        }
-      ]
-    },
+    
     {
       "type": "featured_collection",
       "name": "Collection",
