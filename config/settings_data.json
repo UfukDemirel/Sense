@@ -206,12 +206,6 @@
       "test_1": {
         "type": "test_1",
         "blocks": {
-          "a60c694d-338e-4827-b423-e0fb0eeff72c": {
-            "type": "image_picker",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/trendyol.jpg"
-            }
-          },
           "7850cecb-192d-4182-9c12-1883c53cd20b": {
             "type": "text",
             "settings": {
@@ -220,7 +214,6 @@
           }
         },
         "block_order": [
-          "a60c694d-338e-4827-b423-e0fb0eeff72c",
           "7850cecb-192d-4182-9c12-1883c53cd20b"
         ],
         "settings": {
