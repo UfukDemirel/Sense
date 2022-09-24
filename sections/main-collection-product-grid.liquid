@@ -258,13 +258,13 @@ var Btn=document.querySelector('#btn');
               <script> 
 
 var Btn=document.querySelector('#btn');
-        var control=document.querySelector('#ilk1');
-        var control1=document.querySelector('#ikinci2');
+        var control1=document.querySelector('#ilk1');
+        var control2=document.querySelector('#ikinci2');
         var diz= document.querySelectorAll("#yes");
         var diz1=document.querySelectorAll("#no");
 
         Btn.addEventListener('click', () =>{
-        if(control.checked){
+        if(control1==0){
         for(var i =0; i<diz.length;i++){
               diz[i].style.display="none";
             } 
@@ -276,7 +276,7 @@ var Btn=document.querySelector('#btn');
           }
         });
         Btn.addEventListener('click', () =>{   
-        if(control1.checked){
+        if(control2==1){
             for(var i =0; i<diz1.length;i++){
               diz1[i].style.display="none";
             }  
@@ -288,7 +288,7 @@ var Btn=document.querySelector('#btn');
           }
         });
         Btn.addEventListener('click', () =>{
-          if(control.checked && control1.checked){
+          if(control1.checked && control2.checked){
             for(var i=0;i<diz.length;i++){
               diz[i].style.display="block";
             }
