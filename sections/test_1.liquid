@@ -3,7 +3,7 @@
       <h2>{{ block.settings.text }}</h2>
       <h2>{{ block.settings.title }}</h2>
       <div>
-        {{ block.settings.collection | image_url}}
+        <img src="{{ block.settings.collection | image_url: '100x100'}}">
       </div> 
    </div>
 {% endfor %}
