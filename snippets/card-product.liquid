@@ -163,9 +163,9 @@
                     aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                     aria-live="polite"
                     data-sold-out-message="true"
-                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
-                  >
-                    <span>
+                    {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
+                    
+                  <span>
                       {%- if card_product.selected_or_first_available_variant.available -%}
                         {{ 'products.product.add_to_cart' | t }}
                       {%- else -%}
