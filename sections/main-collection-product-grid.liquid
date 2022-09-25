@@ -25,7 +25,11 @@
     }
   }
 {%- endstyle -%}
-{{current_variant.inventory_quantity }}
+
+{% for variant in product.variants %}
+        variantStock[{{- variant.id -}}] = {{ variant.inventory_quantity }};
+{% endfor %}
+
 {%- for product in collection.products -%}
 {{current_variant.inventory_quantity }}
 {% endfor %}  
