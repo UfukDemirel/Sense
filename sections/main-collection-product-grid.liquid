@@ -121,8 +121,8 @@
             %}
             </li>
             {% endif %}
-{{ 'products.product.sold_out' | t }}
-            {% if product.sold_out %}
+              
+            {% if 'products.product.sold_out' < 1 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
