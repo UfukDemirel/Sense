@@ -26,7 +26,7 @@
   }
 {%- endstyle -%}
 
-
+{{ product.selected_or_first_available_variant.inventory_quantity }}
   <div id="inventory-{{ section.id }}" {{ block.shopify_attributes }} style="color: {{ block.settings.text_color }};"> 
     {% if product.selected_or_first_available_variant.inventory_quantity <= block.settings.show_inventory_threshold or block.settings.show_inventory_threshold == 0 %} 
       <p>Only <strong>{{ product.selected_or_first_available_variant.inventory_quantity }}</strong> left in stock</p> 
