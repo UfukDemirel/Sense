@@ -26,11 +26,11 @@
   }
 {%- endstyle -%}
 
-We have {{ product.variant.inventory_quantity }} in stock.
-
-{% for variant in product.variants %}
-        variantStock[{{- variant.id -}}] = {{ variant.inventory_quantity }};
-{% endfor %}
+{% if product.variants.first.inventory_quantity > 0 %}
+       We currently have {{ product.variants.first.inventory_quantity }} in stock.
+    {% else %}
+       The product is out of stock
+    {% endif %} 
 
 {%- for product in collection.products -%}
 {{current_variant.inventory_quantity }}
