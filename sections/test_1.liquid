@@ -10,8 +10,8 @@
   }
 
 {%- endstyle -%}
-{% for s in section.settings %}      
-      <h2>{{ s.settings.title }}</h2>
+{% for block in section.blocks %}      
+      <h2>{{block.settings.header}}</h2>
 {% endfor %}
 
 <!-- {% for block in section.blocks %}
@@ -41,7 +41,12 @@
           "type": "collection",
           "id": "collection",
           "label": "Collection"
-        }
+        },
+        	{
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    }
       ]
     }
    ],
