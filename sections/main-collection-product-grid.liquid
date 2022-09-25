@@ -25,7 +25,7 @@
     }
   }
 {%- endstyle -%}
-{{ product.hasOutOfStockVariants }}
+{{ product.totalInventory }}
 {% assign section.settings.stock = product.hasOutOfStockVariants %}
 
 <div class="section-{{ section.id }}-padding">
