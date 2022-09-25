@@ -105,7 +105,6 @@
           
             <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}--col-desktop">
-
           
             {%- for product in collection.products -%}
             {% assign lazy_load = false %}
@@ -114,38 +113,7 @@
             {% endif %}
                 
               
-            {% if section == 0 %}
-            <li class="grid__item">
-            {% render 'card-product',
-            card_product:product,
-            media_aspect_ratio: section.settings.image_ratio,
-            show_secondary_image: section.settings.show_secondary_image,
-            show_vendor: section.settings.show_vendor,
-            show_rating: section.settings.show_rating,
-            lazy_load: lazy_load,
-            show_quick_add: section.settings.enable_quick_add,
-            section_id: section.id,
-            money_price: section.settings.money_price,
-            stock: section.settings.stock  
-            %}
-            </li>
-
-            {% else %}
-            <li class="grid__item">
-            {% render 'card-product',
-            card_product:product,
-            media_aspect_ratio: section.settings.image_ratio,
-            show_secondary_image: section.settings.show_secondary_image,
-            show_vendor: section.settings.show_vendor,
-            show_rating: section.settings.show_rating,
-            lazy_load: lazy_load,
-            show_quick_add: section.settings.enable_quick_add,
-            section_id: section.id,
-            money_price: section.settings.money_price,
-            stock: section.settings.stock  
-            %}
-            </li>
-            {% endif %}
+           
 
               
             {% if stock == 0 %}
@@ -153,7 +121,6 @@
             {% render 'card-product',
             card_product:product,
             media_aspect_ratio: section.settings.image_ratio,
-            show_secondary_image: section.settings.show_secondary_image,
             show_vendor: section.settings.show_vendor,
             show_rating: section.settings.show_rating,
             lazy_load: lazy_load,
