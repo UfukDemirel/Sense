@@ -28,23 +28,17 @@
 
 {% schema %}
 {
-  "name": "Text Area",
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "max_blocks": 5,
   "settings": [
-    
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Slideshow"
+    }
   ],
-  "blocks": [
-     {
-       "name": "Slide",
-       "type": "slide",
-       "settings": [
-         {
-           "type": "text",
-           "id": "header",
-           "label": "Text Girin.."
-         }
-       ]
-     }
-   ],
   "blocks": [
     {
       "type": "featured_collection",
