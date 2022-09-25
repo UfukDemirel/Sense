@@ -25,9 +25,9 @@
     }
   }
 {%- endstyle -%}
-
+{{current_variant.inventory_quantity }}
 {%- for product in collection.products -%}
-{{ product.variants }}
+{{current_variant.inventory_quantity }}
 {% endfor %}  
 {% assign section.settings.stock = product.totalInventory %}
 
