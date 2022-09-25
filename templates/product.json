@@ -198,37 +198,26 @@
         "padding_bottom": 36
       }
     },
-    "newsletter": {
-      "type": "newsletter",
+    "16640916312e6d6ad6": {
+      "type": "rich-text",
       "blocks": {
-        "d1e210b2-1271-41db-831b-534e47b641a8": {
+        "166409163165dba9c5-0": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "<p>Talk about your brand<\/p>",
             "heading_size": "h1"
-          }
-        },
-        "paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p><strong>Özel teklifler ve en son haberler için e-posta listemize katılın.<\/strong><\/p>"
-          }
-        },
-        "email-form": {
-          "type": "email_form",
-          "settings": {
           }
         }
       },
       "block_order": [
-        "d1e210b2-1271-41db-831b-534e47b641a8",
-        "paragraph",
-        "email-form"
+        "166409163165dba9c5-0"
       ],
       "settings": {
-        "color_scheme": "background-2",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 68,
+        "padding_top": 40,
         "padding_bottom": 52
       }
     },
@@ -271,6 +260,40 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "d1e210b2-1271-41db-831b-534e47b641a8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Özel teklifler ve en son haberler için e-posta listemize katılın.<\/strong><\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d1e210b2-1271-41db-831b-534e47b641a8",
+        "paragraph",
+        "email-form"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 68,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -278,7 +301,8 @@
     "rich-text",
     "main-product-recommendations",
     "image-with-text",
-    "newsletter",
-    "1664091302255bb76c"
+    "16640916312e6d6ad6",
+    "1664091302255bb76c",
+    "newsletter"
   ]
 }
