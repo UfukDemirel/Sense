@@ -10,8 +10,7 @@
   }
 
 {%- endstyle -%}
- <h2>{{ settings.title }}</h2>
-{% for setting in section.settings %}      
+{% for s in section.settings %}      
       <h2>{{ setting.section.title }}</h2>
 {% endfor %}
 
