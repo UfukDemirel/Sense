@@ -61,18 +61,11 @@
           </s>
         </span>
       {%- endunless -%}
-      <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-      <span class="price-item price-item--sale price-item--last">
-      {{  money_price }} 
-       <!--         
-        uygun kod yazılacak
-        -->
-
-        {%- if money_price -%}
-              <div class="caption-with-letter-spacing light">{{ card_product.price }}</div>
-        {%- endif -%}
-        
-      </span>
+  {%- if money_price -%}
+              <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+              <span class="price-item price-item--sale price-item--last">
+              <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
+            {%- endif -%}
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
