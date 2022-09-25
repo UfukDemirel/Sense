@@ -1,9 +1,6 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-
 {% style %}
 
   .boyut{
@@ -15,16 +12,17 @@
 {%- endstyle -%}
 
 {% for block in section.blocks %}      
-      <h2>{{ block.settings.title }}</h2> 
+      <h2>{{ block.settings.text }}</h2>
+      <h2>{{ block.settings.title }}</h2>
 {% endfor %}
 
 {% for block in section.blocks %}
-   <div>        
+   <div>           
      <div class="color-{{ section.settings.color_scheme }} gradient">
         <div class="collection-list-wrapper boyut page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
-        <div id="Slide-{{ section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
+          <div id="Slide-{{ block.section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
             {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
-        </div>
+          </div>
         </div> 
      </div> 
    </div>
@@ -32,32 +30,52 @@
 
 {% schema %}
 {
-  "name": "Ürün",
-  "settings": [],
-   "blocks": [
+  "name": "Text Area",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Text Area"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+           "id": "title",
+           "label": "Title Giriniz..."
+        }
+      ]
+    }, 
     {
       "type": "text",
       "name": "Text",
       "settings": [
         {
           "type": "text",
-          "id": "Text",
-          "label": "Text"
+           "id": "text",
+           "label": "Text Giriniz..."
         }
       ]
-    }
-  ],
-  "blocks": [
+    },
     {
       "type": "featured_collection",
-      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "name": "Collection",
       "settings": [
         {
           "type": "collection",
           "id": "collection",
-          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+          "label": "Collection"
         }
       ]
+    }
+   ],
+  "presets": [
+    {
+      "name": "Text Area"
     }
   ]
 }
