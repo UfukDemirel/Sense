@@ -25,7 +25,10 @@
     }
   }
 {%- endstyle -%}
+
+{%- for product in collection.products -%}
 {{ product.variants.inventory_quantity }}
+{% endfor %}  
 {% assign section.settings.stock = product.totalInventory %}
 
 <div class="section-{{ section.id }}-padding">
