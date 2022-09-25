@@ -27,7 +27,8 @@
 {%- endstyle -%}
 
 {%- for product in collection.products -%}
-{{ product.selected_or_first_available_variant.inventory_quantity }}
+{% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
+  <p>{{ stock }}</p>
 {% endfor %}  
 
 {% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
