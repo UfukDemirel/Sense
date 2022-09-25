@@ -26,7 +26,7 @@
   }
 {%- endstyle -%}
 
-We have {{ current_variant.inventory_quantity }} in stock.
+We have {{ variant.inventory_quantity }} in stock.
 
 {% for variant in product.variants %}
         variantStock[{{- variant.id -}}] = {{ variant.inventory_quantity }};
