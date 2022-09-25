@@ -55,7 +55,8 @@
           "settings": {
             "heading": "Ürün Detayı",
             "icon": "eye",
-            "content": "<p>Modelin Ölçüleri: <\/p><p>Boy: 1,92 <\/p><p>Göğüs: 96 <\/p><p>Bel: 80 <\/p><p>Basen: 95 <\/p><p>Numune Bedeni: M<\/p><p>Ana Kumaş İçeriği: : Pamuk 20%,Poliester 80%<\/p><p>Ürün Grubu: Erkek Tişört Siyah Long Fit Uzun Bisiklet Yaka Basic Pamuklu Penye Tişört<\/p><p>Kol Boyu : Kısa Kollu<\/p><p>Cinsiyet : Erkek<\/p><p>Ürün Tipi : Tişört<\/p><p>Kalıp : Long Fit<\/p><p>Renk : Siyah<\/p><p>Ürün Uzunluk Ölçüleri : <\/p><p><strong>Omuzdan Ön Boy:<\/strong>Xs-75 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>S-76 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>M-78 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>L-80 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>Xl-82 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>Xxl-83 cm,<\/p><p><strong>Omuzdan Ön Boy:<\/strong>3xl-85 cm<\/p>",
+            "title": "Image with text overlay",
+            "color_title": "#FFFFFF",
             "page": ""
           }
         },
@@ -64,7 +65,8 @@
           "settings": {
             "heading": "Teslimat Bilgileri",
             "icon": "truck",
-            "content": "<p>Teslimat Bilgileri:Kargo ile Teslimat<\/p><p>Defacto.com.tr'den oluşturduğunuz siparişiniz adresinize kargo ile teslim edilir.<\/p><p>Hızlı Teslimat,<strong>Tüm Ürünler 24 Saatte Kargoda<\/strong>*Pazar günleri hariçtir.<\/p><p>Kargo ücreti sabit ve <strong>14.99 TL ’dir<\/strong>.<\/p><p>Kapıda veya online ödeme yapabilirsiniz.<\/p><p>Siparişiniz bulunduğunuz yere bağlı olarak <strong>2-7 iş günü içerisinde<\/strong> adresinize teslim edilir.<\/p><p>Mağazadan Teslim Al<\/p><p>Defacto.com.tr'den oluşturduğunuz siparişinizi adres\/teslimat adımında ‘Mağazadan Teslim Al’ seçerek DeFacto mağazalarından teslim alabilirsiniz.<\/p><p>Kargo <strong>ücretsizdir.<\/strong><\/p><p>Kredi\/Debit Kart ile ödeme yapabilirsiniz.<\/p><p>Siparişiniz kargoya verildikten sonra <strong>2-7 iş günü içerisinde<\/strong> seçtiğiniz DeFacto mağazasına iletilir.<\/p><p>Siparişiniz mağazaya geldiğinde size <strong>bilgilendirme maili ve sms'i<\/strong> gönderilecektir. Siparişinizi mağazaya iletildikten sonraki <strong>10 gün içerisinde<\/strong> ilgili mağazaya giderek teslim alabilirsiniz.<\/p><p>Siparişinizi sms yoluyla ilettiğimiz onay kodunuzla teslim alabilirsiniz.<\/p>",
+            "title": "Image with text overlay",
+            "color_title": "#FFFFFF",
             "page": ""
           }
         },
@@ -73,7 +75,8 @@
           "settings": {
             "heading": "İade İşlemleri",
             "icon": "return",
-            "content": "<p>Siparişinizdeki kullanılmamış ürünleri orijinal paketleri ile 30 gün içinde size en yakın mağazalarımızdan iade edebilir, 90 gün içerisinde mağazalarımızda değişim yapabilir ya da aşağıdaki adımları izleyerek sitemiz üzerinden iade edebilirsiniz.“Hesabım” alanında yer alan “Siparişlerim” listesinden iade etmek istediğiniz siparişinizi seçiniz.“Sipariş Detayı” sayfasından “ İade Talebi” butonuna basınız.Ekranda çıkan iade kodu ile birlikte ücretsiz olarak MNG Kargo ile iade gönderiminizi tamamlayınız. Diğer tüm kargo şirketleri ile yapılan iadelerde kargo ücreti göndericiye aittir.<\/p>",
+            "title": "Image with text overlay",
+            "color_title": "#FFFFFF",
             "page": ""
           }
         },
@@ -82,7 +85,8 @@
           "settings": {
             "heading": "Ödeme Bilgileri",
             "icon": "check_mark",
-            "content": "<p><strong>Garanti Bonus<\/strong> özellikli kredi kartlarına özel <strong>vade farksız 6 taksit<\/strong> fırsatını kaçırma.<\/p><p>Kargo Ücreti<\/p><p><strong>Mobil uygulama<\/strong> üzerinden verdiğiniz <strong>300 TL ve üzeri tüm<\/strong> siparişlerde kargo bedava.<\/p><p>Ödeme YöntemleriKredi\/Debit Kart ile ödeme<\/p><p>Ödeme adımında kart bilgilerinizi girerek siparişinizi tamamlayabilirsiniz.<\/p><p>Kapıda Ödeme<\/p><p>Kapıda ödeme seçeneğinden 2000 TL’ye kadar olan siparişlerinizde faydalanabilirsiniz.<\/p><p>Kapıda ödeme <strong>hizmet bedeli 6,99 TL’dir.<\/strong><\/p><p>Garanti Pay İle Ödeme<\/p><p>Banka sayfasında GSM veya TC Kimlik Numaranız ile ödeme işleminiz BonusFlaş Uygulamasına aktarılacaktır.<\/p><p>Ödeme işlemini tamamladıktan sonra, otomatik olarak sipariş özeti sayfasına yönlendirileceksiniz.<\/p>",
+            "title": "Image with text overlay",
+            "color_title": "#FFFFFF",
             "page": ""
           }
         }
