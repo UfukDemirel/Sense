@@ -26,8 +26,8 @@
   }
 {%- endstyle -%}
 
-{% if product.variants.first.inventory_quantity > 0 %}
-       We currently have {{ product.variants.first.inventory_quantity }} in stock.
+{% if product.variants.inventory_quantity > 0 %}
+       We currently have {{ product.variants.inventory_quantity }} in stock.
     {% else %}
        The product is out of stock
     {% endif %} 
