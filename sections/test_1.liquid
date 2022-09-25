@@ -11,8 +11,8 @@
 
 {%- endstyle -%}
  <h2>{{ settings.title }}</h2>
-{% for block in section.blocks %}      
-      <h2>{{ block.settings.title }}</h2>
+{% for setting in section.settings %}      
+      <h2>{{ setting.section.title }}</h2>
 {% endfor %}
 
 <!-- {% for block in section.blocks %}
