@@ -111,7 +111,7 @@
             {% assign lazy_load = true %}
             {% endif %}
                 
-            {% if product.selected_or_first_available_variant.inventory_quantity != 0 %}
+            {% if stock!= 0 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
@@ -123,7 +123,7 @@
             show_quick_add: section.settings.enable_quick_add,
             section_id: section.id,
             money_price: section.settings.money_price,
-            stock: section.settings.stock  
+            stock: product.selected_or_first_available_variant.inventory_quantity
             %}
             </li>
             {% endif %}
