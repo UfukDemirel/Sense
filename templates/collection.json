@@ -3,15 +3,15 @@
     "main-collection-banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": true,
+        "show_collection_description": false,
         "show_collection_image": true,
-        "color_scheme": "background-1"
+        "color_scheme": "background-2"
       }
     },
     "main-collection-product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "select": "1",
+        "select": "2",
         "products_per_page": 20,
         "columns_desktop": 4,
         "image_ratio": "adapt",
