@@ -104,25 +104,8 @@
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
             {% endif %}
-
-            {% if product.collections %}
-            <li class="grid__item">
-            {% render 'card-product',
-            card_product:product,
-            media_aspect_ratio: section.settings.image_ratio,
-            show_secondary_image: section.settings.show_secondary_image,
-            show_vendor: section.settings.show_vendor,
-            show_rating: section.settings.show_rating,
-            lazy_load: lazy_load,
-            show_quick_add: section.settings.enable_quick_add,
-            section_id: section.id,
-            money_price: section.settings.money_price,
-            stock: section.settings.stock  
-            %}
-            </li>
-            {% endif %}
               
-            {% if 'products.product.sold_out' < 1 %}
+            {% if section.settings.stock < 1 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
