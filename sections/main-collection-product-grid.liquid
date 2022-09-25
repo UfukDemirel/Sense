@@ -27,7 +27,7 @@
 {%- endstyle -%}
 
 {%- for product in collection.products -%}
-{{ product }}
+{{ product.variants }}
 {% endfor %}  
 {% assign section.settings.stock = product.totalInventory %}
 
