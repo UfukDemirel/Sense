@@ -111,8 +111,13 @@
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
             {% endif %}
-
-            {% if stock == 0 %}
+              
+            {% assign aba = true %}
+            {% if aba == true %} 
+            <p>komik</p>
+            {% endif %}  
+              
+            {% if section == 0 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
