@@ -25,8 +25,8 @@
     }
   }
 {%- endstyle -%}
-
-{% assign section.settings.stock = product.selected_or_first_available_variant.available %}
+{{ product.hasOutOfStockVariants }}
+{% assign section.settings.stock = product.hasOutOfStockVariants %}
 
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
