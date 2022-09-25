@@ -15,7 +15,6 @@
 {%- endstyle -%}
 
 {% for block in section.blocks %}      
-      <h2>{{ block.settings.text }}</h2>
       <h2>{{ block.settings.title }}</h2> 
 {% endfor %}
 
@@ -44,17 +43,6 @@
     }
   ],
   "blocks": [
-     {
-       "name": "İmage",
-       "type": "image_picker",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "İmage"
-         }
-       ]
-     },
      {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
