@@ -25,8 +25,7 @@
     }
   }
 {%- endstyle -%}
-{{ forloop.index }}
-{{ product.totalInventory }}
+{{ product.inventory }}
 {% assign section.settings.stock = product.totalInventory %}
 
 <div class="section-{{ section.id }}-padding">
