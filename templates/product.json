@@ -198,20 +198,6 @@
         "padding_bottom": 36
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "cover_image": "shopify:\/\/shop_images\/trendyol.jpg",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=gs9ufutRlS0&list=RDCMUCWUkAPLGDjfsH-_LCEOGOEQ&index=4",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
     "newsletter": {
       "type": "newsletter",
       "blocks": {
@@ -245,6 +231,14 @@
         "padding_top": 68,
         "padding_bottom": 52
       }
+    },
+    "16640912886651d75a": {
+      "type": "collection-slider",
+      "settings": {
+        "title": "Featured Collectionasdasd",
+        "collection": "",
+        "product_count": 4
+      }
     }
   },
   "order": [
@@ -252,7 +246,7 @@
     "rich-text",
     "main-product-recommendations",
     "image-with-text",
-    "video",
-    "newsletter"
+    "newsletter",
+    "16640912886651d75a"
   ]
 }
