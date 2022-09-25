@@ -108,7 +108,7 @@
             {% assign lazy_load = true %}
             {% endif %}
               
-            {% if section.settings.stock < 1 %}
+            {% if section.settings.stock == 0 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
