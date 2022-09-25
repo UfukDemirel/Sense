@@ -17,8 +17,8 @@
 
 {% for block in section.blocks %}
    <div>           
-     <div class="color-{{ section.settings.color_scheme }} gradient">
-          <div id="Slide-{{ block.section.id }}-{{ forloop.index }}" class="boyut collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
+     <div class="boyut">
+          <div id="Slide-{{ block.section.id }}-{{ forloop.index }}" class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}" {{ block.shopify_attributes }}>
             {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
           </div>
      </div> 
