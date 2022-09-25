@@ -235,9 +235,9 @@
     "16640912886651d75a": {
       "type": "collection-slider",
       "settings": {
-        "title": "Featured Collectionasdasd",
-        "collection": "",
-        "product_count": 4
+        "title": "Featured Collection",
+        "collection": "frontpage",
+        "product_count": 7
       }
     }
   },
