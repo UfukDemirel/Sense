@@ -112,37 +112,6 @@
         "padding_bottom": 60
       }
     },
-    "rich-text": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Markanız hakkında konuşun<\/p>",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Markanızla ilgili bilgileri müşterilerinizle paylaşın. Bir ürünü tanımlayın, duyurular yapın veya müşterileri mağazanıza davet edin.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 72
-      }
-    },
     "main-product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -160,51 +129,13 @@
         "padding_bottom": 24
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "height": "large",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "accent-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "16640916312e6d6ad6": {
       "type": "rich-text",
       "blocks": {
         "166409163165dba9c5-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Collection<\/p>",
+            "heading": "<p>Collections<\/p>",
             "heading_size": "h1"
           }
         }
@@ -298,9 +229,7 @@
   },
   "order": [
     "main",
-    "rich-text",
     "main-product-recommendations",
-    "image-with-text",
     "16640916312e6d6ad6",
     "1664091302255bb76c",
     "newsletter"
