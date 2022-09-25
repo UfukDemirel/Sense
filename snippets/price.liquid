@@ -67,6 +67,12 @@
        <!--         
         uygun kod yazılacak
         -->
+
+        {%- if money_price -%}
+              <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
+        {%- endif -%}
+        
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
