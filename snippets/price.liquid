@@ -57,12 +57,12 @@
               {{ compare_at_price | money_with_currency }}
             {% else %}
               {{ compare_at_price | money }}
-                 {%- if money_price -%}
+              {% endif %}
+           {%- if money_price -%}
               <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
               <span class="price-item price-item--sale price-item--last">
               <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
             {%- endif -%}
-            {% endif %}
           </s>
         </span>
       {%- endunless -%}
