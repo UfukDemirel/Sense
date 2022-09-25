@@ -223,19 +223,12 @@
             "settings": {
               "collection": "altinyildiz-classics"
             }
-          },
-          "b3bbd73e-30e0-4b4d-b8e1-0a9231f64a6e": {
-            "type": "title",
-            "settings": {
-              "title": "Collection"
-            }
           }
         },
         "block_order": [
           "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81",
           "7339ea8c-967a-4dc4-846d-8dd13d728487",
-          "1462cd44-5365-4ad3-b521-ea5ec394070e",
-          "b3bbd73e-30e0-4b4d-b8e1-0a9231f64a6e"
+          "1462cd44-5365-4ad3-b521-ea5ec394070e"
         ],
         "settings": {
           "title": "Section"
