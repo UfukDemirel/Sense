@@ -26,11 +26,12 @@
   }
 {%- endstyle -%}
 
-{% if product.variants.inventory_quantity > 0 %}
-       We currently have {{ product.variants.inventory_quantity }} in stock.
-    {% else %}
-       The product is out of stock
+
+  <div id="inventory-{{ section.id }}" {{ block.shopify_attributes }} style="color: {{ block.settings.text_color }};"> 
+    {% if product.selected_or_first_available_variant.inventory_quantity <= block.settings.show_inventory_threshold or block.settings.show_inventory_threshold == 0 %} 
+      <p>Only <strong>{{ product.selected_or_first_available_variant.inventory_quantity }}</strong> left in stock</p> 
     {% endif %} 
+  </div>
 
 {%- for product in collection.products -%}
 {{current_variant.inventory_quantity }}
