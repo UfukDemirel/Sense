@@ -205,31 +205,6 @@
       },
       "test_1": {
         "type": "test_1",
-        "blocks": {
-          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "frontpage"
-            }
-          },
-          "7339ea8c-967a-4dc4-846d-8dd13d728487": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "kadin-giyim"
-            }
-          },
-          "1462cd44-5365-4ad3-b521-ea5ec394070e": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "altinyildiz-classics"
-            }
-          }
-        },
-        "block_order": [
-          "e8f64e8a-520d-40a9-bfb0-1d81e5b1ca81",
-          "7339ea8c-967a-4dc4-846d-8dd13d728487",
-          "1462cd44-5365-4ad3-b521-ea5ec394070e"
-        ],
         "settings": {
         }
       },
@@ -276,6 +251,39 @@
           "title": "Featured Collection",
           "collection": "",
           "product_count": 4
+        }
+      },
+      "collection-list": {
+        "type": "collection-list",
+        "blocks": {
+          "7223ac12-d817-4f0e-b86d-e0843afff13f": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "frontpage"
+            }
+          },
+          "101d0d6b-c874-48e0-99f5-13806af1535b": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "kadin-giyim"
+            }
+          }
+        },
+        "block_order": [
+          "7223ac12-d817-4f0e-b86d-e0843afff13f",
+          "101d0d6b-c874-48e0-99f5-13806af1535b"
+        ],
+        "settings": {
+          "title": "Collections",
+          "heading_size": "h1",
+          "image_ratio": "square",
+          "columns_desktop": 3,
+          "color_scheme": "background-1",
+          "show_view_all": false,
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
         }
       }
     },
