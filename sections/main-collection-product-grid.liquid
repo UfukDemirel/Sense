@@ -112,7 +112,7 @@
             grid--{{ section.settings.columns_desktop }}--col-desktop">
               {% if value1 %}
             <li class="grid__item">
-           <img src="{{ product.image.preview_image | image_url | image_tag}}">
+           <img src="{{ product.images | image_url | image_tag}}">
             {% endif %}
 
             {%- for product in collection.products -%}
