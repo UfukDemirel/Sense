@@ -113,7 +113,7 @@
               {% if value1 %}
             <li class="grid__item">
              {% for image in product.images %} 
-            <img src="{{ image | img_url: '100x100' | img_tag}}">
+            <p>{{ image }}</p>
                {% endfor %}
             {% endif %}
 
