@@ -140,12 +140,12 @@
               </p>
             {%- endif -%}
 
-                {%- if money_price -%}
-              <div class="caption-with-letter-spacing light">{{ card_product.money_price | t }}</div>
-            {%- endif -%}
+            {% render 'price', product: card_product, price_class: '' %}
           </div>
 
-        
+            {%- if money_price -%}
+              <div class="caption-with-letter-spacing light">{{ card_product.money_price | t }}</div>
+            {%- endif -%}
       
         </div>
         {%- if show_quick_add -%}
