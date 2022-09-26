@@ -61,10 +61,8 @@
           </s>
         </span>
       {%- endunless -%}
-
-      {{ money_price }}
       
-      {%- if money_price -%}
+      {%- if money_price==true -%}
           <div>{{ money_price }}</div>
       {%- endif -%}
      
