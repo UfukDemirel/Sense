@@ -32,8 +32,6 @@
   -%}
 
   {%- assign money_price = price | money -%}
-
-  <p>{{ price }}</p>  
   
   <div class="card-wrapper underline-links-hover">
     <div class="card
@@ -142,12 +140,12 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
-          </div>
-
-            {%- if money_price -%}
+                {%- if money_price -%}
               <div class="caption-with-letter-spacing light">{{ card_product.money_price | t }}</div>
             {%- endif -%}
+          </div>
+
+        
       
         </div>
         {%- if show_quick_add -%}
