@@ -110,9 +110,20 @@
           
             <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}--col-desktop">
-              {% if value1 %}
+              
+          {% if value1 %}
             <li class="grid__item">
-             {% for image in product.image.preview_image %} 
+
+              {% for image in product.media %}
+       <div class="swiper-slide">
+         {% if image.media_type == 'image' %}
+            <img class="swiper-img" src="{{ image | image_url}}">
+          {% elsif image.media_type == 'video' or image.media_type == 'external_video' %}
+          {{ image | video_tag }}
+          {% endif %}
+      </div>
+      
+              
             <p>{{ image }}</p>
                {% endfor %}
             {% endif %}
