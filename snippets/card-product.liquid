@@ -140,7 +140,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
 
-            {% render 'price', product: card_product, price_class: '' %}
+            {%- if money_price -%}
+              <div style="font-size: 12px;">{{ card_product.price | t }}</div>
+            {%- endif -%}
       
         </div>
         {%- if show_quick_add -%}
