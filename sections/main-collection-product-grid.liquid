@@ -114,7 +114,7 @@
             {% assign lazy_load = true %}
             {% endif %}
 
-            {% if value1 %}
+            {% if value1 and value2 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
