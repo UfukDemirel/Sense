@@ -143,7 +143,7 @@
             {%- if money_price -%}
               <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
               <span class="price-item price-item--sale price-item--last">
-              <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
+              <div class="caption-with-letter-spacing light">{{ money_price| t }}</div>
             {%- endif -%}
       
         </div>
