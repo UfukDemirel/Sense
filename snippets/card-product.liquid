@@ -140,11 +140,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
 
-            {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
-            {% else %}
-              {{ compare_at_price | money }}
-            {% endif %}
+            {%- if card_product.price -%}
+              <div class="caption-with-letter-spacing light">{{ card_product.price | t }}</div>
+            {%- endif -%}
       
         </div>
         {%- if show_quick_add -%}
