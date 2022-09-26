@@ -32,16 +32,9 @@
 
 {% assign value1 = section.settings.value1 %}
 {% assign value2 = section.settings.value2 %}
-{% assign value2 = card_product.media[1] %}
-
 
 
 <div class="section-{{ section.id }}-padding">
-  
-            {% for image in all_products["tisort"].images %} ​
-            <img src="{{ image.preview_image.src | img_url: 'grande' }}" /> ​
-            {% endfor %}
-        
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
@@ -114,26 +107,14 @@
           
             <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}--col-desktop">
-
-              {% if value1 %}
-            <li class="grid__item">
-             {% for image in product.images %} 
-            <p>{{ image }}</p>
-               {% endfor %}
-            {% endif %}
-
+          
             {%- for product in collection.products -%}
             {% assign lazy_load = false %}
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
             {% endif %}
 
-<!--             {% if value1 %}
-            <li class="grid__item">
-           <img src="{{ product.media | image_url | image_tag}}">
-            {% endif %} -->
-
-            {% if value2 %}
+            {% if value1 %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
@@ -147,7 +128,7 @@
             money_price: section.settings.money_price,
             stock: section.settings.stock  
             %}
-            {% endif %}  
+            {% endif %}
 
 <!--             {% if stock != 0 %}
             <li class="grid__item">
