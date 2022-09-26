@@ -39,7 +39,7 @@
 <div class="section-{{ section.id }}-padding">
   
             
-            {% for image in all_products["lufian-acik-mavi-tisort"].images %} ​
+            {% for image in all_products.images %} ​
             <img src="{{ image.src | img_url: 'grande' }}" /> ​
             {% endfor %}
         
