@@ -97,6 +97,7 @@
               </a>
             {% endif %} -->
             
+            {%- when 'slide' -%}
              {% if block.settings.text_style == "body" %}
                 <h1>{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
