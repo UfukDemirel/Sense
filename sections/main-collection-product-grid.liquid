@@ -26,10 +26,10 @@
   }
 {%- endstyle -%}
 
-{% comment %} {%- for product in collection.products -%}
-{% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
+{%- for product in collection.products -%}
+{% assign stock[] = product.selected_or_first_available_variant.inventory_quantity %}
   <p style="float: left;">&nbsp;{{ stock }}</p>
-{% endfor %} {% endcomment %}
+{% endfor %}
 
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
