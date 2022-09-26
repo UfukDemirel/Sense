@@ -119,7 +119,7 @@
 
             {% if value1 %}
             <li class="grid__item">
-           <img src="{{ product.image.preview_image | image_url: "100x100" | image_tag}}">
+           <img src="{{ product.image.preview_image | image_url | image_tag}}">
             {% endif %}
 
             {% if value2 %}
