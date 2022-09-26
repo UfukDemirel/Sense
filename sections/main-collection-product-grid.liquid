@@ -111,7 +111,7 @@
             {% assign lazy_load = true %}
             {% endif %}
                 
-            {% if product.media[block.settings.picture_select] %}
+            
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
@@ -126,7 +126,7 @@
             stock: section.settings.stock  
             %}
             </li>
-            {% endif %}
+            
             {% endfor %}
   
             {%- if paginate.pages > 1 -%}
