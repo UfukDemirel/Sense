@@ -111,8 +111,6 @@
             {% assign lazy_load = true %}
             {% endif %}
 
-            <select onchange="simple()" id="boxim">
-              
             {% if product.selected_or_first_available_variant.inventory_quantity != 0 %}
             <li class="grid__item">
             {% render 'card-product',
@@ -129,7 +127,6 @@
             %}
             </li>
             {% endif %}
-            </select>
               
             {% endfor %}
           
@@ -143,7 +140,7 @@
   </div>
 </div>   
 
-<script>
+<!-- <script>
 const input = document.querySelector('select');
 const log = document.getElementById('boxim');
 
@@ -152,7 +149,7 @@ input.addEventListener('change', updateValue);
 function updateValue(e) {
   log.textContent = e.target.value;
 }
-</script>  
+</script>   -->
     
 {% schema %}
     {
