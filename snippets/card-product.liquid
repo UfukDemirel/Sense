@@ -32,6 +32,10 @@
   -%}
 
   {%- assign money_price = price | money -%}
+
+  {% for product in cart.product %}
+  <p>{{ product.money_price }}</p>  
+  {% endfor %}
   
   <div class="card-wrapper underline-links-hover">
     <div class="card
