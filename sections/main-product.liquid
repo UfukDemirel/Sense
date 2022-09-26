@@ -77,14 +77,14 @@
             {% assign baslik = block.settings.baslik  %}
             {% assign meta = block.settings.metafield  %}
             
-            {% if me %}
+            {% if block.settings == "metafield" %}
               <h1>{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.metafields.custom.baslik | escape }}
                 </h2>
               </a>
-            {% elsif baslik %}
+            {% elsif block.settings == "baslik" %}
               <h1>{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
