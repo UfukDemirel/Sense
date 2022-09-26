@@ -71,7 +71,7 @@
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
             
-            {% if block.settings.metafield != blank %}
+            {% if block.settings.metafield == false %}
             <h2 class="product-baslik">{{ product.metafields.custom.baslik }}</h2>
 
             {% else %}
