@@ -58,16 +58,6 @@
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
   </div>
-    {% if section.settings.text_style == "body" %}
-                <h1>{{ product.title | escape }}</h1>
-                <a href="{{ product.url }}" class="product__title">
-                <h2 class="h1">
-                  {{ product.title | escape }}
-                </h2>
-              </a>
-              {% else %}
-               {{ product.metafields.custom.baslik }}
-              {% endif %} 
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
