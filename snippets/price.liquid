@@ -61,10 +61,7 @@
           </s>
         </span>
       {%- endunless -%}
-      
-      {%- if money_price -%}
-          <div>{{ money_price }}</div>
-      {%- endif -%}
+
      
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
