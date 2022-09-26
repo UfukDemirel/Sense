@@ -62,8 +62,8 @@
         </span>
       {%- endunless -%}
       
-      {%- if money_price==true -%}
-          <div>{{ money_price }}</div>
+      {%- if money_price -%}
+          <div>{{ product.selected_or_first_available_variant.unit_price }}</div>
       {%- endif -%}
      
     </div>
