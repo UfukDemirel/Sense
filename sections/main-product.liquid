@@ -97,6 +97,12 @@
               </a>
             {% endif %} -->
             
+             {% if block.settings.text_style == "body" %}
+                <h1>{{ product.title | escape }}</h1>
+                <a href="{{ product.url }}" class="product__title">
+               
+              </a>
+                {% endif %} 
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
