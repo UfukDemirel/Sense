@@ -40,7 +40,7 @@
   
             
             {% for image in all_products["tisort"].images %} ​
-            <img src="{{ image.preview_image | img_url: 'grande' }}" /> ​
+            <img src="{{ image.preview_image.src | img_url: 'grande' }}" /> ​
             {% endfor %}
         
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
