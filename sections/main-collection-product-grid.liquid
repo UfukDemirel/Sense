@@ -26,13 +26,10 @@
   }
 {%- endstyle -%}
 
-{% assign stock = section.settings.stock %}
+{% comment %} {%- for product in collection.products -%}
 {% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
-{{ stock }} 
-
-{% assign value1 = section.settings.value1 %}
-{% assign value2 = section.settings.value2 %}
-
+  <p style="float: left;">&nbsp;{{ stock }}</p>
+{% endfor %} {% endcomment %}
 
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -113,8 +110,8 @@
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
             {% endif %}
-
-            {% if value1 %}
+                
+            {% if product.media[block.settings.picture_select] %}
             <li class="grid__item">
             {% render 'card-product',
             card_product:product,
@@ -128,10 +125,10 @@
             money_price: section.settings.money_price,
             stock: section.settings.stock  
             %}
+            </li>
             {% endif %}
-              
             {% endfor %}
-          
+  
             {%- if paginate.pages > 1 -%}
               {% render 'pagination', paginate: paginate, anchor: '' %}
             {%- endif -%}
@@ -140,13 +137,28 @@
       {%- endpaginate -%}
     </div>
   </div>
-</div>   
+</div>    
     
 {% schema %}
     {
       "name": "t:sections.main-collection-product-grid.name",
       "class": "section",
       "settings": [
+        {
+        "type": "select",
+        "id": "select",
+        "label": "İmage Select",
+        "options": [
+        {
+          "value": "1", 
+          "label": "Birinci Resim"
+        },
+        {
+          "value": "2",
+          "label": "İkinci Resim"
+        }
+      ]
+    },
     {
       "type": "range",
       "id": "products_per_page",
@@ -169,7 +181,6 @@
       "type": "header",
       "content": "t:sections.main-collection-product-grid.settings.header__3.content"
     },
-               
     {
       "type": "select",
       "id": "image_ratio",
@@ -213,7 +224,7 @@
       "id": "stock",
       "default": false,
       "label": "Stoklu ürün göster/gösterme"
-    }, 
+    },
     {
       "type": "checkbox",
       "id": "show_rating",
