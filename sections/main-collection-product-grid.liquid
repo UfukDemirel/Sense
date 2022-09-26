@@ -110,23 +110,75 @@
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
             {% endif %}
-                
-            
-            <li class="grid__item">
-            {% render 'card-product',
-            card_product:product,
-            media_aspect_ratio: section.settings.image_ratio,
-            show_secondary_image: section.settings.show_secondary_image,
-            show_vendor: section.settings.show_vendor,
-            show_rating: section.settings.show_rating,
-            lazy_load: lazy_load,
-            show_quick_add: section.settings.enable_quick_add,
-            section_id: section.id,
-            money_price: section.settings.money_price,
-            stock: section.settings.stock  
-            %}
-            </li>
 
+             {% if product.available%} 
+                <li class="grid__item" id="test-{{ forloop.index }}">
+                {% render 'card-product',
+                card_product:product,
+                media_aspect_ratio: section.settings.image_ratio,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                lazy_load: lazy_load,
+                show_quick_add: section.settings.enable_quick_add,
+                section_id: section.id,
+                money_price: section.settings.money_price,
+                stock: section.settings.stock  
+                %}
+                </li>
+               
+               {% else %}
+               
+                    {% if section.settings.stockyes == true %}
+                    <li class="grid__item" style="display: none;">
+                    {% render 'card-product',
+                    card_product:product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id,
+                    money_price: section.settings.money_price,
+                    stock: section.settings.stock  
+                    %}
+                    </li>
+                {% else %} 
+                      
+                    {% if section.settings.stockno == true %}
+                    <li class="grid__item" style="display: block; order:{{ collection.all_products.count }} ">
+                    {% render 'card-product',
+                    card_product:product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id,
+                    money_price: section.settings.money_price,
+                    stock: section.settings.stock  
+                    %}
+                    </li>
+                    
+                    {% else %}
+                    <li class="grid__item" style="display: block;">
+                    {% render 'card-product',
+                    card_product:product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load,
+                    show_quick_add: section.settings.enable_quick_add,
+                    section_id: section.id,
+                    money_price: section.settings.money_price,
+                    stock: section.settings.stock  
+                    %}
+                    </li> 
+ {% endif %} {% endif %}
+            {% endif %}
             {% endfor %}
   
             {%- if paginate.pages > 1 -%}
