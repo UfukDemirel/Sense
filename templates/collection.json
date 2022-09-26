@@ -11,9 +11,9 @@
     "main-collection-product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "picture_select": "subtitle",
         "products_per_page": 20,
         "columns_desktop": 4,
-        "picture_select": "body",
         "image_ratio": "adapt",
         "show_secondary_image": false,
         "show_vendor": false,
