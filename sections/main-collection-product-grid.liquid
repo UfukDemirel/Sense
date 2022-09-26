@@ -27,9 +27,8 @@
 {%- endstyle -%}
 
 {% assign stock = section.settings.stock %}
-{% assign abc = stock %}
-{% assign abc = product.selected_or_first_available_variant.inventory_quantity %}
-{{ abc }}
+{% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
+{{ stock }}
 
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
