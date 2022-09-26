@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "c59b886e-828b-448f-b273-64b289730437": {
+          "type": "text",
+          "settings": {
+            "title_select": "body"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -38,8 +44,6 @@
         "5f1c4aa9-629e-4838-97c1-5d20176606c1": {
           "type": "slide",
           "settings": {
-            "baslik": false,
-            "metafield": false,
             "image": "shopify:\/\/shop_images\/Trendyol_online.png",
             "url1": "{{ product.metafields.custom.trendyol.value }}",
             "image2": "shopify:\/\/shop_images\/Hepsiburada_logo_official.svg_a6bac346-0fe7-4e02-9257-265059163fc0.png",
@@ -90,6 +94,7 @@
         }
       },
       "block_order": [
+        "c59b886e-828b-448f-b273-64b289730437",
         "title",
         "price",
         "variant_picker",
