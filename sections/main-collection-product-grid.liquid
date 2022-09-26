@@ -113,17 +113,7 @@
               
           {% if value1 %}
             <li class="grid__item">
-
-              {% for image in product.media %}
-       <div class="swiper-slide">
-         {% if image.media_type == 'image' %}
-            <img class="swiper-img" src="{{ image | image_url}}">
-          {% elsif image.media_type == 'video' or image.media_type == 'external_video' %}
-          {{ image | video_tag }}
-          {% endif %}
-      </div>
-      
-              
+             {% for image in product.image.preview_image %} 
             <p>{{ image }}</p>
                {% endfor %}
             {% endif %}
