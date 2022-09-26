@@ -81,7 +81,9 @@
                   {{ product.title | escape }}
                 </h2>
               </a>
-                {% endif %} 
+              {% else %}
+               {{ product.metafields.custom.baslik }}
+              {% endif %} 
             
             </div>
           {%- when 'price' -%}
