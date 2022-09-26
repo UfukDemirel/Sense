@@ -141,7 +141,18 @@
       {%- endpaginate -%}
     </div>
   </div>
-</div>    
+</div>   
+
+<script>
+const input = document.querySelector('select');
+const log = document.getElementById('boxim');
+
+input.addEventListener('change', updateValue);
+
+function updateValue(e) {
+  log.textContent = e.target.value;
+}
+</script>  
     
 {% schema %}
     {
