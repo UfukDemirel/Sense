@@ -112,7 +112,7 @@
             grid--{{ section.settings.columns_desktop }}--col-desktop">
               {% if value1 %}
             <li class="grid__item">
-             {% for image in product.images %} 
+             {% for image in product.image.preview_image %} 
             <p>{{ image }}</p>
                {% endfor %}
             {% endif %}
