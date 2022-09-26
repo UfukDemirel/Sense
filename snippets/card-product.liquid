@@ -34,7 +34,7 @@
   {%- assign money_price = price | money -%}
 
   {% for product in card_product %}
-  <p>{{ product.money_price }}</p>  
+  <p>{{ money_price }}</p>  
   {% endfor %}
   
   <div class="card-wrapper underline-links-hover">
