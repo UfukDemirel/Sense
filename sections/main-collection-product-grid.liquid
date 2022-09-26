@@ -26,9 +26,11 @@
   }
 {%- endstyle -%}
 
-{% assign stock = section.settings.stock %}
+{% comment %} {% assign stock = section.settings.stock %}
 {% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
-{{ stock }}
+{{ stock }} {% endcomment %}
+
+{% assign value1 = section.settings.select.value %}
 
 <div class="section-{{ section.id }}-padding">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -108,6 +110,22 @@
             {% assign lazy_load = false %}
             {%- if forloop.index > 2 -%}
             {% assign lazy_load = true %}
+            {% endif %}
+
+            {% if stock != 0 %}
+            <li class="grid__item">
+            {% render 'card-product',
+            card_product:product,
+            media_aspect_ratio: section.settings.image_ratio,
+            show_secondary_image: section.settings.show_secondary_image,
+            show_vendor: section.settings.show_vendor,
+            show_rating: section.settings.show_rating,
+            lazy_load: lazy_load,
+            show_quick_add: section.settings.enable_quick_add,
+            section_id: section.id,
+            money_price: section.settings.money_price,
+            stock: section.settings.stock  
+            %}
             {% endif %}
 
             {% if stock != 0 %}
@@ -225,6 +243,18 @@
       "default": true,
       "label": "Stoklu ürün göster/gösterme"
     },
+    {
+      "type": "checkbox",
+      "id": "value1",
+      "default": true,
+      "label": "First Picture"
+    },  
+    {
+      "type": "checkbox",
+      "id": "value2",
+      "default": true,
+      "label": "Secondary Picture"
+    }, 
     {
       "type": "checkbox",
       "id": "show_rating",
