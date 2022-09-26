@@ -26,9 +26,9 @@
   }
 {%- endstyle -%}
 
-{% comment %} {% assign stock = section.settings.stock %}
+{% assign stock = section.settings.stock %}
 {% assign stock = product.selected_or_first_available_variant.inventory_quantity %}
-{{ stock }} {% endcomment %}
+{{ stock }} 
 
 {% assign value1 = section.settings.value1 %}
 {% assign value2 = section.settings.value2 %}
