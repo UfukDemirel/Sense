@@ -110,7 +110,11 @@
           
             <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}--col-desktop">
-            
+
+
+              {% for image in product.images %} 
+            <p>{{ image }}</p>
+               {% endfor %}
               {% if value1 %}
             <li class="grid__item">
              {% for image in product.images %} 
