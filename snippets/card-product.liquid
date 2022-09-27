@@ -65,7 +65,7 @@
         {%- endif -%}
 
          {%- if section.settings.picture_select == "sub" -%}
-           {% if card_product.featured_media > 1 %}
+           {% if card_product.featured_media >= 1 %}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
            <img
