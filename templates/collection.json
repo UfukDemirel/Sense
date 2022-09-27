@@ -19,7 +19,7 @@
         "show_vendor": false,
         "money_price": true,
         "stockyes": false,
-        "stockno": false,
+        "stockno": true,
         "show_rating": true,
         "enable_quick_add": false,
         "enable_filtering": true,
