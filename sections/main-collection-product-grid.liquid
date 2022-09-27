@@ -104,6 +104,12 @@
           
             <ul id="product-grid" data-id="{{ section.id }}" class="grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
             grid--{{ section.settings.columns_desktop }}--col-desktop">
+
+            {% for product in product.collections %}
+
+              {{ product.media[block.settings.picture_select] }}
+            
+            {% endfor %}
           
             {%- for product in collection.products -%}
             {% assign lazy_load = false %}
