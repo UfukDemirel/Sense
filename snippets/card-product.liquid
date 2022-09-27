@@ -65,9 +65,9 @@
         {%- endif -%}
 
          {%- if section.settings.picture_select == "sub" -%}
+           {% if card_product.media < 1 %}
           <div class="card__media">
             <div class="media media--transparent media--hover-effect">
-
            <img
                   srcset="{%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
                     {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
@@ -84,9 +84,9 @@
                   width="{{ card_product.media[1].width }}"
                   height="{{ card_product.media[1].height }}"
                 >
-       
             </div>
           </div>
+             {%- endif -%}
         {%- endif -%}
   
         <div class="card__content">
